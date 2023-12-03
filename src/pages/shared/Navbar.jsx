@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
   const navOptions = (
     <>
       <li>
@@ -28,7 +28,10 @@ const Navbar = () => {
           </Link>
         </>
       ) : (
-        <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
+        <button
+          onClick={logOut}
+          className="btn bg-[#1a1a1a] text-white font-medium block md:hidden "
+        >
           Logout
         </button>
       )}
@@ -92,7 +95,10 @@ const Navbar = () => {
             </Link>
           </>
         ) : (
-          <button className="hidden md:block btn bg-[#1a1a1a] text-white font-medium">
+          <button
+            onClick={logOut}
+            className="hidden md:block btn bg-[#1a1a1a] text-white font-medium"
+          >
             Logout
           </button>
         )}

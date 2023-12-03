@@ -20,13 +20,13 @@ export const AuthProvider = ({ children }) => {
   const axiosPublic = useAxiosPublic();
 
   //   google provider
-  const googleProvider = (provider) => {
+  const googleSignUp = (provider) => {
     setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
   //   create user with email and password
-  const HandleCreateUser = (email, password) => {
+  const handleCreateUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -81,8 +81,8 @@ export const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     loading,
-    googleProvider,
-    HandleCreateUser,
+    googleSignUp,
+    handleCreateUser,
     updateUserProfile,
     handleLogin,
     logOut,

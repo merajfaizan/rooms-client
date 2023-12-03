@@ -1,9 +1,52 @@
+/* eslint-disable no-unused-vars */
 import { useForm, Controller } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+import useAuth from "../../hooks/useAuth";
+import { GoogleAuthProvider } from "firebase/auth";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { toast } from "react-toastify";
+import ToastComponent from "../../components/ToastComponent";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { handleSubmit, control } = useForm();
+  const { handleCreateUser, googleSignUp } = useAuth();
+  const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
+
+  // google signup
+  const googleProvider = new GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    googleSignUp(googleProvider)
+      .then((result) => {
+        const detailedUser = result.user;
+
+        // add user to database (if user email is not exists in DB)
+        axiosPublic
+          .post("/addUser", {
+            uid: detailedUser.uid,
+            name: detailedUser.displayName,
+            email: detailedUser.email,
+          })
+          .then((response) => {
+            Swal.fire({
+              title: "Good job!",
+              text: `${response.data.message}`,
+              icon: "success",
+            });
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message.split(":");
+        toast.error(errorMessage[1]);
+      });
+  };
 
   const onSubmit = (data) => {
     console.log(data);
@@ -96,6 +139,7 @@ const Register = () => {
               <button
                 type="button"
                 className="btn"
+                onClick={handleGoogleSignIn}
                 style={{
                   background:
                     "linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335)",
@@ -114,6 +158,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+      <ToastComponent />
     </div>
   );
 };
