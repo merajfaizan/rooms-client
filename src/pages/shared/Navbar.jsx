@@ -16,15 +16,21 @@ const Navbar = () => {
       </li>
       {!user ? (
         <>
-          <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
-            <Link to={"/login"}>Login</Link>
-          </button>
-          <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
-            <Link to={"/register"}>Register</Link>
-          </button>
+          <Link to={"/login"}>
+            <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
+              Login
+            </button>
+          </Link>
+          <Link to={"/register"}>
+            <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
+              Register
+            </button>
+          </Link>
         </>
       ) : (
-        <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">Logout</button>
+        <button className="btn bg-[#1a1a1a] text-white font-medium block md:hidden ">
+          Logout
+        </button>
       )}
     </>
   );
@@ -74,12 +80,16 @@ const Navbar = () => {
       <div className="navbar-end">
         {!user ? (
           <>
-            <button className="hidden md:block btn mr-2  bg-[#1a1a1a] text-white font-medium">
-              <Link to={"/login"}>Login</Link>
-            </button>
-            <button className="hidden md:block btn bg-[#1a1a1a] text-white font-medium">
-              <Link to={"/register"}>Register</Link>
-            </button>
+            <Link to={"/login"}>
+              <button className="hidden md:block btn mr-2  bg-[#1a1a1a] text-white font-medium">
+                Login
+              </button>
+            </Link>
+            <Link to={"/register"}>
+              <button className="hidden md:block btn bg-[#1a1a1a] text-white font-medium">
+                Register
+              </button>
+            </Link>
           </>
         ) : (
           <button className="hidden md:block btn bg-[#1a1a1a] text-white font-medium">

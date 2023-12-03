@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-[#1a1a1a] text-white rounded">
       <aside>
-        <img className="w-24" src={"/public/logo-icon-white.png"} alt="logo" />
+        <img className="w-24" src={"/logo-icon-white.png"} alt="logo" />
         <p className="font-bold">
           Rooms (Ltd) <br /> Get Exclusive Rooms. Book Now!
         </p>
