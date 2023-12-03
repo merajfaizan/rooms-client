@@ -1,0 +1,198 @@
+[
+  {
+    "title": "Luxury Suite with Ocean View",
+    "description": "Indulge in the ultimate luxury with our spacious suite overlooking the breathtaking ocean view.",
+    "pricePerNight": 299.99,
+    "roomSize": "600 sq. ft.",
+    "availability": 5,
+    "roomImages": [
+      "https://i.ibb.co/WpFFYLZ/r9.jpg",
+      "https://i.ibb.co/LzH7VJp/r3.jpg",
+      "https://i.ibb.co/J7NQMNH/r6.jpg"
+    ],
+    "specialOffers": ["Complimentary Breakfast", "Free Wi-Fi"],
+    "reviews": [
+      {
+        "name": "John Doe",
+        "rating": 4.5,
+        "comment": "Amazing room! Loved the view and amenities.",
+        "timestamp": "2023-05-15T12:30:00Z"
+      },
+      {
+        "name": "Traveler Girl",
+        "rating": 5,
+        "comment": "Exceptional service and attention to detail. Highly recommended!",
+        "timestamp": "2023-06-02T09:45:00Z"
+      }
+    ],
+    "bookedDates": ["2023-05-20", "2023-06-05", "2023-06-15"]
+  },
+  {
+    "title": "Cozy Mountain Cabin",
+    "description": "Escape to a charming cabin nestled in the heart of the mountains. Perfect for a peaceful retreat.",
+    "pricePerNight": 149.99,
+    "roomSize": "400 sq. ft.",
+    "availability": 8,
+    "roomImages": [
+      "https://i.ibb.co/J7NQMNH/r6.jpg",
+      "https://i.ibb.co/LzH7VJp/r3.jpg",
+      "https://i.ibb.co/WpFFYLZ/r9.jpg"
+    ],
+    "specialOffers": ["Fireplace Included", "Scenic Hiking Trails"],
+    "reviews": [
+      {
+        "name": "NatureExplorer",
+        "rating": 4.2,
+        "comment": "Beautiful cabin with stunning views. Enjoyed every moment!",
+        "timestamp": "2023-04-10T14:15:00Z"
+      },
+      {
+        "name": "AdventureSeeker",
+        "rating": 4.8,
+        "comment": "Serene atmosphere, cozy interiors. A perfect getaway!",
+        "timestamp": "2023-04-28T11:30:00Z"
+      }
+    ],
+    "bookedDates": ["2023-04-15", "2023-05-02", "2023-05-25"]
+  },
+  {
+    "title": "Modern City Loft",
+    "description": "Experience urban living in this stylish loft with modern amenities and city skyline views.",
+    "pricePerNight": 199.99,
+    "roomSize": "550 sq. ft.",
+    "availability": 4,
+    "roomImages": [
+      "https://i.ibb.co/gdZ5WpL/r1.jpg",
+      "https://i.ibb.co/WpFFYLZ/r9.jpg",
+      "https://i.ibb.co/34SVZvD/r7.jpg"
+    ],
+    "specialOffers": ["Access to Rooftop Lounge", "Complimentary City Tour"],
+    "reviews": [
+      {
+        "name": "UrbanExplorer",
+        "rating": 4.5,
+        "comment": "Sleek design, fantastic location. Loved the city vibes!",
+        "timestamp": "2023-03-22T18:45:00Z"
+      },
+      {
+        "name": "CityNomad",
+        "rating": 4.0,
+        "comment": "Great experience! The loft had everything I needed for a comfortable stay.",
+        "timestamp": "2023-04-05T09:00:00Z"
+      }
+    ],
+    "bookedDates": ["2023-04-18", "2023-05-10", "2023-06-01"]
+  },
+  {
+    "title": "Beachfront Paradise Villa",
+    "description": "Step into paradise with this luxurious beachfront villa, offering stunning ocean views and private beach access.",
+    "pricePerNight": 399.99,
+    "roomSize": "800 sq. ft.",
+    "availability": 2,
+    "roomImages": [
+      "https://i.ibb.co/34SVZvD/r7.jpg",
+      "https://i.ibb.co/WpFFYLZ/r9.jpg",
+      "https://i.ibb.co/gdZ5WpL/r1.jpg"
+    ],
+    "specialOffers": ["Private Beach Access", "In-Villa Spa Services"],
+    "reviews": [
+      {
+        "name": "SunsetLover",
+        "rating": 5.0,
+        "comment": "Absolutely breathtaking! The villa exceeded all expectations.",
+        "timestamp": "2023-02-14T20:00:00Z"
+      },
+      {
+        "name": "LuxuryTraveler",
+        "rating": 4.7,
+        "comment": "A true paradise experience. Loved the attention to detail in every aspect.",
+        "timestamp": "2023-03-05T15:30:00Z"
+      }
+    ],
+    "bookedDates": ["2023-03-18", "2023-04-12", "2023-05-05"]
+  },
+  {
+    "title": "Rustic Countryside Cottage",
+    "description": "Escape to a charming countryside cottage surrounded by nature. Perfect for a tranquil getaway.",
+    "pricePerNight": 129.99,
+    "roomSize": "350 sq. ft.",
+    "availability": 6,
+    "roomImages": [
+      "https://i.ibb.co/LzH7VJp/r3.jpg",
+      "https://i.ibb.co/gdZ5WpL/r1.jpg",
+      "https://i.ibb.co/WpFFYLZ/r9.jpg"
+    ],
+    "specialOffers": ["Outdoor Fireplace", "Scenic Countryside Walks"],
+    "reviews": [
+      {
+        "name": "NatureRetreat",
+        "rating": 4.0,
+        "comment": "Lovely cottage with a rustic touch. Enjoyed the peaceful surroundings.",
+        "timestamp": "2023-06-10T11:45:00Z"
+      },
+      {
+        "name": "CottageExplorer",
+        "rating": 4.2,
+        "comment": "Perfect getaway from the hustle and bustle. Would love to visit again!",
+        "timestamp": "2023-06-25T09:15:00Z"
+      }
+    ],
+    "bookedDates": ["2023-07-02", "2023-07-18", "2023-08-05"]
+  },
+  {
+    "title": "Historic Downtown Apartment",
+    "description": "Immerse yourself in the charm of a historic downtown apartment. Walkable to iconic landmarks and vibrant city life.",
+    "pricePerNight": 179.99,
+    "roomSize": "500 sq. ft.",
+    "availability": 3,
+    "roomImages": [
+      "https://i.ibb.co/2vDSnqB/r4.jpg",
+      "https://i.ibb.co/gdZ5WpL/r1.jpg",
+      "https://i.ibb.co/LzH7VJp/r3.jpg"
+    ],
+    "specialOffers": ["Central Location", "Complimentary City Guide"],
+    "reviews": [
+      {
+        "name": "HistoryBuff",
+        "rating": 4.5,
+        "comment": "A step back in time! The apartment was full of character and history.",
+        "timestamp": "2023-08-12T14:30:00Z"
+      },
+      {
+        "name": "CityHistoryExplorer",
+        "rating": 4.8,
+        "comment": "Fantastic stay in a beautifully preserved historic apartment. Highly recommended!",
+        "timestamp": "2023-09-02T10:00:00Z"
+      }
+    ],
+    "bookedDates": ["2023-09-15", "2023-10-01", "2023-10-18"]
+  },
+  {
+    "title": "Mountain View Retreat",
+    "description": "Unwind in a serene mountain view retreat. Experience breathtaking sunsets and cozy evenings by the fireplace.",
+    "pricePerNight": 249.99,
+    "roomSize": "700 sq. ft.",
+    "availability": 4,
+    "roomImages": [
+      "https://i.ibb.co/34SVZvD/r7.jpg",
+      "https://i.ibb.co/J7NQMNH/r6.jpg",
+      "https://i.ibb.co/2vDSnqB/r4.jpg"
+    ],
+    "specialOffers": ["Private Balcony", "Outdoor Jacuzzi"],
+    "reviews": [
+      {
+        "name": "MountainLover",
+        "rating": 4.7,
+        "comment": "A true escape into nature! Loved the mountain views and cozy ambiance.",
+        "timestamp": "2023-11-08T19:45:00Z"
+      },
+      {
+        "name": "NatureEnthusiast",
+        "rating": 4.5,
+        "comment": "Peaceful retreat with stunning mountain scenery. Will definitely return!",
+        "timestamp": "2023-11-25T12:15:00Z"
+      }
+    ],
+    "bookedDates": ["2023-12-05", "2023-12-20", "2024-01-10"]
+  }
+]
