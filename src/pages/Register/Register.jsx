@@ -25,16 +25,19 @@ const Register = () => {
         // add user to database (if user email is not exists in DB)
         axiosPublic
           .post("/addUser", {
-            uid: detailedUser.uid,
             name: detailedUser.displayName,
             email: detailedUser.email,
           })
           .then((response) => {
-            Swal.fire({
-              title: "Good job!",
-              text: `${response.data.message}`,
-              icon: "success",
-            });
+            if (
+              response.data.message !== "Email already exists in the database"
+            ) {
+              return Swal.fire({
+                title: "Good job!",
+                text: `${response.data.message}`,
+                icon: "success",
+              });
+            }
           })
           .catch((error) => {
             console.error(error);
@@ -48,9 +51,39 @@ const Register = () => {
       });
   };
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      // Create the user (assuming handleCreateUser returns a Promise)
+      const result = await handleCreateUser(data.email, data.password);
+
+      // Check if the email already exists in the database
+      const response = await axiosPublic.post("/addUser", {
+        name: data.name,
+        email: data.email,
+      });
+
+      if (response.data.message === "Email already exists in the database") {
+        Swal.fire({
+          title: "Error",
+          text: "Email already exists in the database",
+          icon: "error",
+        });
+      } else {
+        // Handle success case
+        Swal.fire({
+          title: "Success",
+          text: response.data.message,
+          icon: "success",
+        });
+        navigate("/");
+      }
+    } catch (error) {
+      // Handle any errors that occurred during the process
+      const errorMessage = error.message.split(":");
+      toast.error(errorMessage[1]);
+    }
   };
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -134,6 +167,7 @@ const Register = () => {
                 </Link>
               </p>
             </div>
+            <hr />
             {/* Google Login Button */}
             <div className="form-control mt-4">
               <button
