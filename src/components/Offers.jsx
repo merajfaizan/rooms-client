@@ -5,7 +5,7 @@ import promo2 from "../assets/promo2.jpg";
 const Offers = () => {
   return (
     <div className="mb-4">
-      <h1 className="text-center text-5xl py-4 border-y my-5 border-gray-700">Special Offers</h1>
+      <h1 data-aos="fade-up" className="text-center text-5xl py-4 border-y my-5 border-gray-700">Special Offers</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex-1">
           <img className="w-full object-cover" src={promo1} alt="promo" />

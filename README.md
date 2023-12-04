@@ -1,8 +1,24 @@
-# React + Vite
+# Rooms | A Room Booking Web app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+project name: Rooms
+Project Live Link:[Rooms](https://rooms-5d540.web.app/).
 
-Currently, two official plugins are available:
+### Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Hotel Booking Web Application, used for rooms booking.
+
+## key features
+
+- Get Rooms with range filter.
+- User Can Book Room .
+- User Can Login with Email and Password also Google Login available.
+- Integrated JWT Authentication for verify user.
+- Used DaisyUI for Components
+
+## Technology used :
+
+- React
+- React Router
+- Tailwind css
+- Express.js
+- MongoDB

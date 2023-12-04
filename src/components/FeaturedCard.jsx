@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FeaturedCard = ({ room }) => {
   console.log(room);
   return (
-    <div className="bg-white p-4 shadow-md rounded-md">
+    <div  className="bg-white p-4 shadow-md rounded-md">
       <Link to={`/rooms/${room._id}`}>
         <img
           src={room.roomImages[0]}

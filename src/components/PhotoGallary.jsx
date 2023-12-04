@@ -15,7 +15,7 @@ const PhotoGallary = () => {
   ];
   return (
     <div className="mb-5">
-      <h1 className="text-center text-5xl py-4 border-y my-5 border-gray-700">
+      <h1 data-aos="fade-down" className="text-center text-5xl py-4 border-y my-5 border-gray-700">
         Room Photo Gallery
       </h1>
       <PhotoAlbum layout="rows" photos={photos1} />
