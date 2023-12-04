@@ -3,11 +3,11 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-const BookingCard = ({ booking, onCancelBooking }) => {
+const BookingCard = ({ booking, handleCancelBooking }) => {
   const MySwal = withReactContent(Swal);
   const [loading, setLoading] = useState(false);
 
-  const handleCancelBooking = () => {
+  const onCancelBooking = () => {
     MySwal.fire({
       title: "Cancel Booking",
       text: "Are you sure you want to cancel this booking?",
@@ -19,7 +19,8 @@ const BookingCard = ({ booking, onCancelBooking }) => {
       showLoaderOnConfirm: true,
       preConfirm: async () => {
         try {
-          await onCancelBooking(booking.bookingId);
+          setLoading(true);
+          await handleCancelBooking(booking.roomId);
           return true;
         } catch (error) {
           console.error("Error cancelling booking:", error);
@@ -56,7 +57,7 @@ const BookingCard = ({ booking, onCancelBooking }) => {
         Room Size: {booking.roomDetails.roomSize}
       </p>
       <button
-        onClick={handleCancelBooking}
+        onClick={onCancelBooking}
         className={`bg-red-500 text-white px-4 py-2 rounded ${
           loading ? "cursor-not-allowed" : "hover:bg-red-700"
         }`}
