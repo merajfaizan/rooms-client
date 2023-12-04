@@ -7,6 +7,7 @@ import Rooms from "../pages/Rooms/Rooms";
 import MyBookings from "../pages/MyBookings/MyBookings";
 import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/Rooms/RoomDetails/RoomDetails";
+import NotFound from "../pages/NotFound/NotFound";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
