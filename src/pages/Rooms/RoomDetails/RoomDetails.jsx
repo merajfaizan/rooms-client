@@ -7,11 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Rating from "react-rating-stars-component";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
 
 const RoomDetails = () => {
-  const { user } = useAuth();
   const navigate = useNavigate();
   const { roomId } = useParams();
   const axiosSecure = useAxiosSecure();

@@ -8,6 +8,7 @@ import MyBookings from "../pages/MyBookings/MyBookings";
 import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/Rooms/RoomDetails/RoomDetails";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
