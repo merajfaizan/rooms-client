@@ -9,6 +9,7 @@ import Rating from "react-rating-stars-component";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const RoomDetails = () => {
   const { user } = useAuth();
@@ -99,6 +100,11 @@ const RoomDetails = () => {
 
   return (
     <div className="px-5 my-8 grid grid-cols-4 overflow-hidden">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{room.title} | Rooms </title>
+        <link rel="shortcut icon" href="/logo-icon-white.png" type="image/x-icon" />
+      </Helmet>
       <div className="col-span-4">
         <Slider {...sliderSettings}>
           {room.roomImages.map((image, index) => (

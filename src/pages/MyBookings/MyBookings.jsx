@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import BookingCard from "../../components/BookingCard";
+import { Helmet } from "react-helmet";
 
 const MyBookings = () => {
   const axiosSecure = useAxiosSecure();
@@ -62,6 +63,15 @@ const MyBookings = () => {
 
   return (
     <div className="px-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Bookings | Rooms </title>
+        <link
+          rel="shortcut icon"
+          href="/logo-icon-white.png"
+          type="image/x-icon"
+        />
+      </Helmet>
       <h2 className="text-2xl font-bold mb-4">My Bookings</h2>
       {loading ? (
         <span className="loading loading-spinner loading-lg"></span>

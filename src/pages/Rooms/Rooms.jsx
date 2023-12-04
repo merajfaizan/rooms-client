@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import RoomCard from "../../components/RoomCard";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { Helmet } from "react-helmet";
 
 const Rooms = () => {
   const axiosPublic = useAxiosPublic();
@@ -35,6 +36,10 @@ const Rooms = () => {
 
   return (
     <div className="px-5 my-8">
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Find Rooms | Rooms </title>
+      </Helmet>
       <h2 className="text-3xl font-bold mb-4">Available Rooms</h2>
 
       {/* Filter section */}
