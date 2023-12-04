@@ -1,7 +1,17 @@
+import Banner from "../../components/Banner";
+import FeaturedRoom from "../../components/FeaturedRoom";
+import NewsLetter from "../../components/NewsLetter";
+import Offers from "../../components/Offers";
+import PhotoGallary from "../../components/PhotoGallary";
+
 const Home = () => {
   return (
     <div className="px-2 min-h-screen">
-      <h1>This is home</h1>
+      <Banner />
+      <PhotoGallary />
+      <Offers />
+      <FeaturedRoom />
+      <NewsLetter />
     </div>
   );
 };
