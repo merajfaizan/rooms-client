@@ -37,9 +37,8 @@ const MyBookings = () => {
     fetchMyBookings();
   }, [fetchMyBookings]);
 
-  const handleUpdateBooking = (bookingId) => {
-    // Logic for updating the booking (if needed)
-    console.log("Update Booking:", bookingId);
+  const handleUpdateDate = (bookingId, newDate) => {
+    console.log(bookingId, newDate);
   };
 
   // Logic for canceling the booking
@@ -74,7 +73,7 @@ const MyBookings = () => {
             <BookingCard
               key={index}
               booking={booking}
-              handleUpdateBooking={handleUpdateBooking}
+              handleUpdateDate={handleUpdateDate}
               handleCancelBooking={handleCancelBooking}
             />
           ))}

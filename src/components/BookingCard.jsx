@@ -3,9 +3,48 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-const BookingCard = ({ booking, handleCancelBooking }) => {
+const BookingCard = ({ booking, handleUpdateDate, handleCancelBooking }) => {
   const MySwal = withReactContent(Swal);
   const [loading, setLoading] = useState(false);
+  const [newDate, setNewDate] = useState();
+
+  const onUpdateDate = () => {
+    MySwal.fire({
+      title: "Update Booking Date",
+      html: (
+        <input
+          type="date"
+          value={newDate}
+          onChange={(e) => setNewDate(e.target.value)}
+        />
+      ),
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Update Date",
+      showLoaderOnConfirm: true,
+      preConfirm: async () => {
+        try {
+          setLoading(true);
+          await handleUpdateDate(booking.roomId, newDate);
+          return true;
+        } catch (error) {
+          console.error("Error updating booking date:", error);
+          MySwal.showValidationMessage(`Error: ${error.message}`);
+          return false;
+        }
+      },
+    })
+      .then((result) => {
+        if (result.isConfirmed) {
+          MySwal.fire("Updated!", "Booking date has been updated.", "success");
+          // Additional logic after successful update
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   const onCancelBooking = () => {
     MySwal.fire({
@@ -56,6 +95,15 @@ const BookingCard = ({ booking, handleCancelBooking }) => {
       <p className="text-gray-600 mb-4">
         Room Size: {booking.roomDetails.roomSize}
       </p>
+      <button
+        onClick={onUpdateDate}
+        className={`bg-blue-500 text-white px-4 py-2 rounded ${
+          loading ? "cursor-not-allowed" : "hover:bg-blue-700"
+        } mr-2`}
+        disabled={loading}
+      >
+        {loading ? "Updating..." : "Update Date"}
+      </button>
       <button
         onClick={onCancelBooking}
         className={`bg-red-500 text-white px-4 py-2 rounded ${
