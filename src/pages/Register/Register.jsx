@@ -27,6 +27,7 @@ const Register = () => {
           .post("/addUser", {
             name: detailedUser.displayName,
             email: detailedUser.email,
+            myBookings: [],
           })
           .then((response) => {
             if (
@@ -60,6 +61,7 @@ const Register = () => {
       const response = await axiosPublic.post("/addUser", {
         name: data.name,
         email: data.email,
+        myBookings: [],
       });
 
       if (response.data.message === "Email already exists in the database") {

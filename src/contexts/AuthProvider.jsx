@@ -52,11 +52,6 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      setUser(currentUser);
-      // set user from mongodb
-      // axiosPublic.get(`/users/${currentUser?.email}`).then((res) => {
-      //   setUser(res.data.user);
-      // });
 
       if (currentUser) {
         // get token and store client

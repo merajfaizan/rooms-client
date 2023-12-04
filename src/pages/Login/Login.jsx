@@ -30,7 +30,11 @@ const Login = () => {
 
   const handleDatabaseUpdate = async (name, email) => {
     try {
-      const response = await axiosPublic.post("/addUser", { name, email });
+      const response = await axiosPublic.post("/addUser", {
+        name,
+        email,
+        myBookings: [],
+      });
       handleResponseMessage(response.data.message);
     } catch (error) {
       console.error(error);
