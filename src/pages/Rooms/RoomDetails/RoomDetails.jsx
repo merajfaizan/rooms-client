@@ -8,8 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Rating from "react-rating-stars-component";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
 
 const RoomDetails = () => {
+  const { user } = useAuth();
   const navigate = useNavigate();
   const { roomId } = useParams();
   const axiosSecure = useAxiosSecure();
@@ -200,12 +202,21 @@ const RoomDetails = () => {
             </div>
 
             {/* Book Now Button */}
-            <button
-              onClick={handleBookNow}
-              className="bg-[#1a1a1a] text-white px-4 py-2 rounded hover:bg-green-700"
-            >
-              Book Now
-            </button>
+            {user ? (
+              <button
+                onClick={handleBookNow}
+                className="bg-[#1a1a1a] text-white px-4 py-2 rounded hover:bg-green-700"
+              >
+                Book Now
+              </button>
+            ) : (
+              <button
+                onClick={() => navigate("/login")}
+                className="bg-[#1a1a1a] text-white px-4 py-2 rounded hover:bg-green-700"
+              >
+                Book Now
+              </button>
+            )}
           </div>
         ) : (
           <div>
