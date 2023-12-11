@@ -1,6 +1,6 @@
 # Rooms | A Room Booking Website
 
-![Rooms Logo](https://raw.githubusercontent.com/merajfaizan/rooms-client/main/public/logo-icon-white.png)
+![Rooms Logo](https://raw.githubusercontent.com/merajfaizan/rooms-client/main/public/logo-icon-black.png)
 
 ## Overview
 
