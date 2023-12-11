@@ -8,8 +8,8 @@
 
 ### Live Demo
 
-Check out the live demo [here](https://rooms-5d540.web.app/).
-Server github link [here](https://github.com/merajfaizan/rooms-server).
+- Check out the live demo [here](https://rooms-5d540.web.app/).
+- Server github link [here](https://github.com/merajfaizan/rooms-server).
 
 ## Features
 
