@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "rooms-5d540"
-  }
+    "default": "rooms-5d540",
+    "staging": "rooms-5d540"
+  },
+  "targets": {},
+  "etags": {}
 }
